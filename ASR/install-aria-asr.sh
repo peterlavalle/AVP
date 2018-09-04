@@ -38,7 +38,7 @@ sudo apt install libatlas3-base
 # (depending on your platform you may need 5.5 or 7.5)
 #printf "\n\n------------------------\n*Install libcublas, libcurand, and libcudart ... \n"
 #sudo apt install libcublas5.5 libcurand5.5 libcudart5.5
-#sudo apt install libcublas7.5 libcurand7.5 libcudart7.5
+sudo apt install libcublas7.5 libcurand7.5 libcudart7.5
 printf "\n\n------------------------\n*Making binaries executable ... \n"
 chmod +x bin/online2-audio-nnet2-latgen-faster
 chmod +x bin/online2-audio-nnet2-latgen-faster-gpu
