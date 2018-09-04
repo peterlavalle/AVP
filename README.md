@@ -106,7 +106,7 @@ We used a GeForce GTX 660 Ti with 3016M of RAM and had no problems.
 
 ```
 linux $ cd ~
-linux $ git clone https://github.com/ARIA-VALUSPA/AVP.git
+linux $ git clone -b gpu-7.5 https://github.com/peterlavalle/AVP.git
 linux $ cd AVP/ASR/
 linux $ chmod +=rwx ./install-aria-asr.sh
 linux $ chmod +=rwx run/*.sh

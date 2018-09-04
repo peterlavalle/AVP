@@ -7,6 +7,6 @@ FOR /F "tokens=1,2" %%i in (model_all.lst) DO (
 		set FILE=%%i
 		set URL=%%j
 		ECHO Downloading %%i
-		curl.exe -L -o ../Agent-Input/%%i %%j
+		curl.exe -k -L -o ../Agent-Input/%%i %%j
 	)
 )

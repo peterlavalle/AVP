@@ -13,19 +13,19 @@ TARGETDIREN="./models/en/"
 TARGETDIRDE="./models/de/"
 TARGETDIRFR="./models/fr/"
 printf "\n\n------------------------\n* Installing English models ... \n........................\n"
-wget "$HOSTURL/$MODELDATE/$MODELSEN"
+wget --no-check-certificate "$HOSTURL/$MODELDATE/$MODELSEN"
 rm -rf $TARGETDIREN
 mkdir -p $TARGETDIREN
 tar -xf $MODELSEN -C "./models/en/"
 rm $MODELSEN
 printf "\n\n------------------------\n*Installing German models ... \n........................\n"
-wget "$HOSTURL/$MODELDATE/$MODELSDE"
+wget --no-check-certificate "$HOSTURL/$MODELDATE/$MODELSDE"
 rm -rf $TARGETDIRDE
 mkdir -p $TARGETDIRDE
 tar -xf $MODELSDE -C "./models/de/"
 rm $MODELSDE
 printf "\n\n------------------------\n*Installing French models ... \n........................\n"
-wget "$HOSTURL/$MODELDATE/$MODELSFR"
+wget --no-check-certificate "$HOSTURL/$MODELDATE/$MODELSFR"
 rm -rf $TARGETDIRFR
 mkdir -p $TARGETDIRFR
 tar -xf $MODELSFR -C "./models/fr/"
