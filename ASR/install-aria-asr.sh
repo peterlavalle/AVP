@@ -12,6 +12,13 @@ HOSTURL="https://noxi.aria-agent.eu/models"
 TARGETDIREN="./models/en/"
 TARGETDIRDE="./models/de/"
 TARGETDIRFR="./models/fr/"
+printf "\n\n------------------------\n*Install libatlas3-base ... \n"
+sudo apt install libatlas3-base
+# Uncomment the next two lines if you need to install these libraries
+# (depending on your platform you may need 5.5 or 7.5)
+#printf "\n\n------------------------\n*Install libcublas, libcurand, and libcudart ... \n"
+#sudo apt install libcublas5.5 libcurand5.5 libcudart5.5
+sudo apt install libcublas7.5 libcurand7.5 libcudart7.5
 printf "\n\n------------------------\n* Installing English models ... \n........................\n"
 wget --no-check-certificate "$HOSTURL/$MODELDATE/$MODELSEN"
 rm -rf $TARGETDIREN
@@ -32,13 +39,6 @@ tar -xf $MODELSFR -C "./models/fr/"
 rm $MODELSFR
 #printf "\n\n------------------------\n*Copying 'atlas' folder to '/usr/local/' ... \n"
 #sudo cp -r "atlas" "/usr/local/"
-printf "\n\n------------------------\n*Install libatlas3-base ... \n"
-sudo apt install libatlas3-base
-# Uncomment the next two lines if you need to install these libraries
-# (depending on your platform you may need 5.5 or 7.5)
-#printf "\n\n------------------------\n*Install libcublas, libcurand, and libcudart ... \n"
-#sudo apt install libcublas5.5 libcurand5.5 libcudart5.5
-sudo apt install libcublas7.5 libcurand7.5 libcudart7.5
 printf "\n\n------------------------\n*Making binaries executable ... \n"
 chmod +x bin/online2-audio-nnet2-latgen-faster
 chmod +x bin/online2-audio-nnet2-latgen-faster-gpu
