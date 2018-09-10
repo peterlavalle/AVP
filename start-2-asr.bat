@@ -1,7 +1,5 @@
 @ECHO OFF
 
-docker rm -f avp3-ariaasr
-ECHO Continuing happily ...
+ssh next@192.168.0.114 -L8888:127.0.0.1:8888
 
-docker build -t ariaasr %~dp0/ASR
-docker run -p 8888:8888 --name avp3-ariaasr ariaasr
+PAUSE
