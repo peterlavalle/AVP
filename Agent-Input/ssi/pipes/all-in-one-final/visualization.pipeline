@@ -49,4 +49,7 @@
 		<input pin="interest(avg-long)" frame="1"/>
 	</consumer>			
 	
+	<consumer create="SignalPainter:paint-emotion" type="5" title="EMOTIONS" barNames="NEU,ANG,DIS,FEA,HAP,SAD,SUR" autoscale="false" fix="1.0,0.0">
+                <input pin="emax_emotion" frame="1"/>
+        </consumer>
 </pipeline>		
